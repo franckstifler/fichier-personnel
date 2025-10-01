@@ -20,6 +20,17 @@ defmodule EduCountWeb.Router do
     get "/", PageController, :home
   end
 
+  scope "/admin", EduCountWeb do
+    pipe_through :browser
+
+    live "/regions", RegionLive.Index, :index
+    live "/regions/new", RegionLive.Form, :new
+    live "/regions/:id/edit", RegionLive.Form, :edit
+
+    live "/regions/:id", RegionLive.Show, :show
+    live "/regions/:id/show/edit", RegionLive.Show, :edit
+  end
+
   # Other scopes may use custom stacks.
   # scope "/api", EduCountWeb do
   #   pipe_through :api
