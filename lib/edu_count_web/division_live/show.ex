@@ -8,10 +8,10 @@ defmodule EduCountWeb.DivisionLive.Show do
       <.header>
         {@division.name}
         <:actions>
-          <.button navigate={~p"/admin/divisions"}>
+          <.button navigate={~p"/config/divisions"}>
             <.icon name="hero-arrow-left" />
           </.button>
-          <.button variant="primary" navigate={~p"/admin/divisions/#{@division}/edit?return_to=show"}>
+          <.button variant="primary" navigate={~p"/config/divisions/#{@division}/edit?return_to=show"}>
             <.icon name="hero-pencil-square" /> {gettext("Edit Division")}
           </.button>
         </:actions>

@@ -8,7 +8,7 @@ defmodule EduCountWeb.DivisionLive.Index do
       <.header>
         {gettext("Listing Divisions")}
         <:actions>
-          <.button variant="primary" navigate={~p"/admin/divisions/new"}>
+          <.button variant="primary" navigate={~p"/config/divisions/new"}>
             <.icon name="hero-plus" /> {gettext("New Division")}
           </.button>
         </:actions>
@@ -17,17 +17,17 @@ defmodule EduCountWeb.DivisionLive.Index do
       <.table
         id="divisions"
         rows={@streams.divisions}
-        row_click={fn {_id, division} -> JS.navigate(~p"/admin/divisions/#{division}") end}
+        row_click={fn {_id, division} -> JS.navigate(~p"/config/divisions/#{division}") end}
       >
         <:col :let={{_id, division}} label="Name">{division.name}</:col>
         <:col :let={{_id, division}} label="Name">{division.region.name}</:col>
 
         <:action :let={{_id, division}}>
           <div class="sr-only">
-            <.link navigate={~p"/admin/divisions/#{division}"}>{gettext("Show")}</.link>
+            <.link navigate={~p"/config/divisions/#{division}"}>{gettext("Show")}</.link>
           </div>
 
-          <.link navigate={~p"/admin/divisions/#{division}/edit"}>{gettext("Edit")}</.link>
+          <.link navigate={~p"/config/divisions/#{division}/edit"}>{gettext("Edit")}</.link>
         </:action>
       </.table>
     </Layouts.app>

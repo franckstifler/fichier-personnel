@@ -8,7 +8,7 @@ defmodule EduCountWeb.RegionLive.Index do
       <.header>
         {gettext("Listing Regions")}
         <:actions>
-          <.button variant="primary" navigate={~p"/admin/regions/new"}>
+          <.button variant="primary" navigate={~p"/config/regions/new"}>
             <.icon name="hero-plus" /> {gettext("New Region")}
           </.button>
         </:actions>
@@ -17,7 +17,7 @@ defmodule EduCountWeb.RegionLive.Index do
       <.table
         id="regions"
         rows={@streams.regions}
-        row_click={fn {_id, region} -> JS.navigate(~p"/admin/regions/#{region}") end}
+        row_click={fn {_id, region} -> JS.navigate(~p"/config/regions/#{region}") end}
       >
         <%!-- <:col :let={{_id, region}} label="Id">{region.id}</:col> --%>
 
@@ -25,10 +25,10 @@ defmodule EduCountWeb.RegionLive.Index do
 
         <:action :let={{_id, region}}>
           <div class="sr-only">
-            <.link navigate={~p"/admin/regions/#{region}"}>{gettext("Show")}</.link>
+            <.link navigate={~p"/config/regions/#{region}"}>{gettext("Show")}</.link>
           </div>
 
-          <.link navigate={~p"/admin/regions/#{region}/edit"}>{gettext("Edit")}</.link>
+          <.link navigate={~p"/config/regions/#{region}/edit"}>{gettext("Edit")}</.link>
         </:action>
       </.table>
     </Layouts.app>

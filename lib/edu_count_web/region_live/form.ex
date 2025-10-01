@@ -77,6 +77,6 @@ defmodule EduCountWeb.RegionLive.Form do
     assign(socket, form: to_form(form))
   end
 
-  defp return_path("index", _region), do: ~p"/admin/regions"
-  defp return_path("show", region), do: ~p"/admin/regions/#{region.id}"
+  defp return_path("index", _region), do: ~p"/config/regions"
+  defp return_path("show", region), do: ~p"/config/regions/#{region.id}"
 end

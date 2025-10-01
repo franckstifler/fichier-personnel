@@ -9,10 +9,10 @@ defmodule EduCountWeb.RegionLive.Show do
         {@region.name}
 
         <:actions>
-          <.button navigate={~p"/admin/regions"}>
+          <.button navigate={~p"/config/regions"}>
             <.icon name="hero-arrow-left" />
           </.button>
-          <.button variant="primary" navigate={~p"/admin/regions/#{@region}/edit?return_to=show"}>
+          <.button variant="primary" navigate={~p"/config/regions/#{@region}/edit?return_to=show"}>
             <.icon name="hero-pencil-square" /> {gettext("Edit Region")}
           </.button>
         </:actions>

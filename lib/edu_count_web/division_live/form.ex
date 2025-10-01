@@ -85,6 +85,6 @@ defmodule EduCountWeb.DivisionLive.Form do
     assign(socket, form: to_form(form))
   end
 
-  defp return_path("index", _division), do: ~p"/admin/divisions"
-  defp return_path("show", division), do: ~p"/admin/divisions/#{division.id}"
+  defp return_path("index", _division), do: ~p"/config/divisions"
+  defp return_path("show", division), do: ~p"/config/divisions/#{division.id}"
 end
