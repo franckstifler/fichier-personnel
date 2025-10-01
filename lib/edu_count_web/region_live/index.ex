@@ -6,10 +6,10 @@ defmodule EduCountWeb.RegionLive.Index do
     ~H"""
     <Layouts.app flash={@flash}>
       <.header>
-        Listing Regions
+        {gettext("Listing Regions")}
         <:actions>
           <.button variant="primary" navigate={~p"/admin/regions/new"}>
-            <.icon name="hero-plus" /> New Region
+            <.icon name="hero-plus" /> {gettext("New Region")}
           </.button>
         </:actions>
       </.header>
@@ -25,10 +25,10 @@ defmodule EduCountWeb.RegionLive.Index do
 
         <:action :let={{_id, region}}>
           <div class="sr-only">
-            <.link navigate={~p"/admin/regions/#{region}"}>Show</.link>
+            <.link navigate={~p"/admin/regions/#{region}"}>{gettext("Show")}</.link>
           </div>
 
-          <.link navigate={~p"/admin/regions/#{region}/edit"}>Edit</.link>
+          <.link navigate={~p"/admin/regions/#{region}/edit"}>{gettext("Edit")}</.link>
         </:action>
       </.table>
     </Layouts.app>
@@ -39,7 +39,7 @@ defmodule EduCountWeb.RegionLive.Index do
   def mount(_params, _session, socket) do
     {:ok,
      socket
-     |> assign(:page_title, "Listing Regions")
+     |> assign(:page_title, gettext("Listing Regions"))
      |> stream(:regions, Ash.read!(EduCount.Census.Region))}
   end
 

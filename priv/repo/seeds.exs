@@ -21,5 +21,39 @@ regions = [
   [name: "Nord-Ouest"],
   [name: "Sud-Ouest"]
 ]
-Ash.bulk_create(regions, EduCount.Census.Region, :create, upsert?: true, upsert_identity: :unique_name, upsert_fields: [])
-|> dbg()
+
+Ash.bulk_create(regions, EduCount.Census.Region, :create,
+  upsert?: true,
+  upsert_identity: :unique_name,
+  upsert_fields: []
+)
+
+divisions = %{
+  "Centre" => [
+    "Haute-Sanaga",
+    "Lekié",
+    "Mbam-et-Inoubou",
+    "Mbam-et-Kim",
+    "Méfou-et-Afamba",
+    "Méfou-et-Akono",
+    "Mfoundi",
+    "Nyong-et-Kéllé",
+    "Nyong-et-Mfoumou",
+    "Nyong-et-So'o"
+  ]
+}
+
+Enum.each(regions, fn [name: name] ->
+  region_divisions = Map.get(divisions, name, [])
+  region = EduCount.Census.get_region_by_name!(name)
+
+  Enum.map(region_divisions, fn division_name ->
+    %{name: division_name, region_id: region.id}
+  end)
+  |> Ash.bulk_create(EduCount.Census.Division, :create,
+    upsert?: true,
+    upsert_identity: :unique_name,
+    upsert_fields: [],
+    authorize?: false
+  )
+end)

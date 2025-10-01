@@ -29,6 +29,13 @@ defmodule EduCountWeb.Router do
 
     live "/regions/:id", RegionLive.Show, :show
     live "/regions/:id/show/edit", RegionLive.Show, :edit
+
+    live "/divisions", DivisionLive.Index, :index
+    live "/divisions/new", DivisionLive.Form, :new
+    live "/divisions/:id/edit", DivisionLive.Form, :edit
+
+    live "/divisions/:id", DivisionLive.Show, :show
+    live "/divisions/:id/show/edit", DivisionLive.Show, :edit
   end
 
   # Other scopes may use custom stacks.

@@ -30,7 +30,7 @@ defmodule EduCountWeb.RegionLive.Show do
   def mount(%{"id" => id}, _session, socket) do
     {:ok,
      socket
-     |> assign(:page_title, "Show Region")
+     |> assign(:page_title, gettext("Show Region"))
      |> assign(:region, Ash.get!(EduCount.Census.Region, id))}
   end
 end

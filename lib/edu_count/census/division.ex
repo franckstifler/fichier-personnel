@@ -1,16 +1,16 @@
-defmodule EduCount.Census.Region do
+defmodule EduCount.Census.Division do
   use Ash.Resource,
     otp_app: :edu_count,
     domain: EduCount.Census,
     data_layer: AshPostgres.DataLayer
 
   postgres do
-    table "regions"
+    table "divisions"
     repo EduCount.Repo
   end
 
   actions do
-    defaults [:read, :destroy, create: [:name], update: [:name]]
+    defaults [:read, :destroy, create: [:name, :region_id], update: [:name, :region_id]]
 
     read :list_alphabetically do
       prepare build(sort: [name: :asc])
@@ -26,7 +26,11 @@ defmodule EduCount.Census.Region do
     end
   end
 
+  relationships do
+    belongs_to :region, EduCount.Census.Region, allow_nil?: false
+  end
+
   identities do
-    identity :unique_name, [:name]
+    identity :unique_name, [:name, :region_id]
   end
 end

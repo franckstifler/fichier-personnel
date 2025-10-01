@@ -11,7 +11,7 @@ defmodule EduCountWeb.RegionLive.Form do
       </.header>
 
       <.form for={@form} id="region-form" phx-change="validate" phx-submit="save">
-        <.input field={@form[:name]} type="text" label="Name" />
+        <.input field={@form[:name]} type="text" label={gettext("Name")} />
 
         <.button phx-disable-with="Saving..." variant="primary">{gettext("Save Region")}</.button>
         <.button navigate={return_path(@return_to, @region)}>{gettext("Cancel")}</.button>
@@ -28,8 +28,8 @@ defmodule EduCountWeb.RegionLive.Form do
         id -> Ash.get!(EduCount.Census.Region, id)
       end
 
-    action = if is_nil(region), do: "New", else: "Edit"
-    page_title = action <> " " <> "Region"
+    action = if is_nil(region), do: gettext("New"), else: gettext("Edit")
+    page_title = action <> " " <> gettext("Region")
 
     {:ok,
      socket
