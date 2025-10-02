@@ -67,7 +67,8 @@ defmodule EduCount.MixProject do
       {:dns_cluster, "~> 0.1.1"},
       {:bandit, "~> 1.5"},
       {:cinder, "~> 0.7"},
-      {:live_select, "~> 1.7"}
+      {:live_select, "~> 1.7"},
+      {:csv, "~> 3.2"}
     ]
   end
 

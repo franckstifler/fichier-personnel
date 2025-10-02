@@ -7,11 +7,11 @@ defmodule EduCountWeb.PersonnelLive.Index do
     <Layouts.app flash={@flash}>
       <.header>
         {gettext("Listing Personnels")}
-        <%!-- <:actions>
-          <.button variant="primary" navigate={~p"/personnels/new"}>
-            <.icon name="hero-plus" /> New Personnel
-          </.button>
-        </:actions> --%>
+        <:actions>
+          <a class="btn btn-seconday" href={~p"/config/personnels/download"} target="_blank">
+            <.icon name="hero-arrow-down" /> {gettext("Download")}
+          </a>
+        </:actions>
       </.header>
 
       <Cinder.Table.table
@@ -20,29 +20,42 @@ defmodule EduCountWeb.PersonnelLive.Index do
         query_opts={[load: [:full_name, :sub_division_appointed, :sub_division_of_origin]]}
         row_click={fn personnel -> JS.navigate(~p"/config/personnels/#{personnel}") end}
       >
-        <:col :let={personnel} label="Full name" field="full_name" filter sort class="font-semibold">
+        <:col
+          :let={personnel}
+          label={gettext("Full name")}
+          field="full_name"
+          filter
+          sort
+          class="font-semibold"
+        >
           <p>{personnel.full_name}</p>
           <p :if={personnel.maiden_name} class="">{personnel.maiden_name}</p>
         </:col>
 
-        <:col :let={personnel} label="Gender" field="gender" filter>
+        <:col :let={personnel} label={gettext("Gender")} field="gender" filter>
           {EduCount.Census.Enums.Gender.description(personnel.gender)}
         </:col>
 
-        <:col :let={personnel} label="Date of birth" field="date_of_birth">
+        <:col :let={personnel} label={gettext("Date of birth")} field="date_of_birth">
           <p>{personnel.date_of_birth}</p>
           <p :if={personnel.place_of_birth} class="">{personnel.place_of_birth}</p>
         </:col>
 
-        <:col :let={personnel} label="Status" field="matrimonial_status" filter class="font-semibold">
+        <:col
+          :let={personnel}
+          label={gettext("Status")}
+          field="matrimonial_status"
+          filter
+          class="font-semibold"
+        >
           {EduCount.Census.Enums.MatrimonialStatus.description(personnel.matrimonial_status)} ({personnel.children_count})
         </:col>
 
-        <:col :let={personnel} label="Matricule" field="matricule" filter sort>
+        <:col :let={personnel} label={gettext("Matricule")} field="matricule" filter sort>
           {personnel.matricule}
         </:col>
 
-        <:col :let={personnel} label="Grade" field="grade">
+        <:col :let={personnel} label={gettext("Grade")} field="grade">
           <p>{EduCount.Census.Enums.Grade.description(personnel.grade)}</p>
           <p>
             {personnel.professional_diploma} {gettext("in")} {EduCount.Census.Enums.ProfessionalDiplomaOption.description(
@@ -55,7 +68,7 @@ defmodule EduCountWeb.PersonnelLive.Index do
 
         <%!-- <:col :let={personnel} label="Other diplomas">{personnel.other_diplomas}</:col> --%>
 
-        <:col :let={personnel} label="Fonction" field="fonction">
+        <:col :let={personnel} label={gettext("Fonction")} field="fonction">
           <EduCountWeb.PersonnelLive.Show.fonction_component fonction={personnel.fonction} />
         </:col>
 

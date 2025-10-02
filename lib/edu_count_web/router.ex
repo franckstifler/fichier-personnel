@@ -51,6 +51,7 @@ defmodule EduCountWeb.Router do
 
     # Personnels
     live "/personnels/new", PersonnelLive.Form, :new
+    get "/personnels/download", DownloadController, :personnel_download
     live "/personnels/:id/edit", PersonnelLive.Form, :edit
     live "/personnels", PersonnelLive.Index, :index
     live "/personnels/:id", PersonnelLive.Show, :show
