@@ -19,12 +19,9 @@ defmodule EduCountWeb.Router do
 
     get "/", PageController, :home
 
-    live "/personnels", PersonnelLive.Index, :index
     live "/personnels/new", PersonnelLive.Form, :new
-    # live "/personnels/:id/edit", PersonnelLive.Form, :edit
-
-    live "/personnels/:id", PersonnelLive.Show, :show
-    # live "/personnels/:id/show/edit", PersonnelLive.Show, :edit
+    live "/personnels/check", PersonnelLive.Check, :check
+    live "/personnels/view/:id", PersonnelLive.View, :view
   end
 
   scope "/config", EduCountWeb do
@@ -51,6 +48,13 @@ defmodule EduCountWeb.Router do
 
     live "/sub_divisions/:id", SubDivisionLive.Show, :show
     live "/sub_divisions/:id/show/edit", SubDivisionLive.Show, :edit
+
+    # Personnels
+    live "/personnels/new", PersonnelLive.Form, :new
+    live "/personnels/:id/edit", PersonnelLive.Form, :edit
+    live "/personnels", PersonnelLive.Index, :index
+    live "/personnels/:id", PersonnelLive.Show, :show
+    live "/personnels/:id/show/edit", PersonnelLive.Show, :edit
   end
 
   # Other scopes may use custom stacks.

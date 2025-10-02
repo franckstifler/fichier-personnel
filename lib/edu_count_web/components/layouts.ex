@@ -49,6 +49,8 @@ defmodule EduCountWeb.Layouts do
       </div>
     </main>
 
+    <.footer />
+
     <.flash_group flash={@flash} />
     """
   end
@@ -73,7 +75,51 @@ defmodule EduCountWeb.Layouts do
       </div>
     </main>
 
+    <.footer />
+
     <.flash_group flash={@flash} />
+    """
+  end
+
+  defp footer(assigns) do
+    ~H"""
+    <footer class="bg-white dark:bg-gray-900">
+      <div class="container flex flex-col items-center justify-between px-6 py-8 mx-auto lg:flex-row">
+        <a href="#" class="font-bold">
+          Copyright FS
+        </a>
+
+        <div class="flex flex-wrap items-center justify-center gap-4 mt-6 lg:gap-6 lg:mt-0">
+          <.link
+            href="mailto:francktchowa@gmail.com?subject=Fichier%20du%20Personnel%20Support"
+            class="link link-hover"
+          >
+            <div class="flex items-center gap-x-1">
+              <.icon name="hero-envelope" />
+              <div>Email Admin</div>
+            </div>
+          </.link>
+          <.link class="link link-hover" href="https://wa.me/23778284265" target="_blank">
+            <div class="flex items-center gap-x-1">
+              <svg
+                class="size-4"
+                xmlns="http://www.w3.org/2000/svg"
+                width="200"
+                height="200"
+                viewBox="0 0 24 24"
+                fill="#000000"
+              >
+                <path
+                  fill="#000000"
+                  d="M16.6 14c-.2-.1-1.5-.7-1.7-.8c-.2-.1-.4-.1-.6.1c-.2.2-.6.8-.8 1c-.1.2-.3.2-.5.1c-.7-.3-1.4-.7-2-1.2c-.5-.5-1-1.1-1.4-1.7c-.1-.2 0-.4.1-.5c.1-.1.2-.3.4-.4c.1-.1.2-.3.2-.4c.1-.1.1-.3 0-.4c-.1-.1-.6-1.3-.8-1.8c-.1-.7-.3-.7-.5-.7h-.5c-.2 0-.5.2-.6.3c-.6.6-.9 1.3-.9 2.1c.1.9.4 1.8 1 2.6c1.1 1.6 2.5 2.9 4.2 3.7c.5.2.9.4 1.4.5c.5.2 1 .2 1.6.1c.7-.1 1.3-.6 1.7-1.2c.2-.4.2-.8.1-1.2l-.4-.2m2.5-9.1C15.2 1 8.9 1 5 4.9c-3.2 3.2-3.8 8.1-1.6 12L2 22l5.3-1.4c1.5.8 3.1 1.2 4.7 1.2c5.5 0 9.9-4.4 9.9-9.9c.1-2.6-1-5.1-2.8-7m-2.7 14c-1.3.8-2.8 1.3-4.4 1.3c-1.5 0-2.9-.4-4.2-1.1l-.3-.2l-3.1.8l.8-3l-.2-.3c-2.4-4-1.2-9 2.7-11.5S16.6 3.7 19 7.5c2.4 3.9 1.3 9-2.6 11.4"
+                />
+              </svg>
+              <div>Whatsapp admin</div>
+            </div>
+          </.link>
+        </div>
+      </div>
+    </footer>
     """
   end
 

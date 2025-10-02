@@ -17,92 +17,118 @@ defmodule EduCountWeb.PersonnelLive.Index do
       <Cinder.Table.table
         id="personnels"
         resource={EduCount.Census.Personnel}
-        row_click={fn personnel -> JS.navigate(~p"/personnels/#{personnel}") end}
+        query_opts={[load: [:full_name, :sub_division_appointed, :sub_division_of_origin]]}
+        row_click={fn personnel -> JS.navigate(~p"/config/personnels/#{personnel}") end}
       >
-        <:col :let={personnel} label="Last name" field="last_name" filter sort>
-          {personnel.last_name}
+        <:col :let={personnel} label="Full name" field="full_name" filter sort class="font-semibold">
+          <p>{personnel.full_name}</p>
+          <p :if={personnel.maiden_name} class="">{personnel.maiden_name}</p>
         </:col>
 
-        <:col :let={personnel} label="First name" field="first_name" filter sort>
-          {personnel.first_name}
+        <:col :let={personnel} label="Gender" field="gender" filter>
+          {EduCount.Census.Enums.Gender.description(personnel.gender)}
         </:col>
 
-        <:col :let={personnel} label="Maiden name">{personnel.maiden_name}</:col>
-
-        <:col :let={personnel} label="Gender" field="gender" filter>{personnel.gender}</:col>
-
-        <:col :let={personnel} label="Date of birth" field="date_of_birth" filter>
-          {personnel.date_of_birth}
+        <:col :let={personnel} label="Date of birth" field="date_of_birth">
+          <p>{personnel.date_of_birth}</p>
+          <p :if={personnel.place_of_birth} class="">{personnel.place_of_birth}</p>
         </:col>
 
-        <:col :let={personnel} label="Place of birth" field="place_of_birth" filter>
-          {personnel.place_of_birth}
+        <:col :let={personnel} label="Status" field="matrimonial_status" filter class="font-semibold">
+          {EduCount.Census.Enums.MatrimonialStatus.description(personnel.matrimonial_status)} ({personnel.children_count})
         </:col>
-
-        <:col :let={personnel} label="Matrimonial status" field="matrimonial_status" filter>
-          {personnel.matrimonial_status}
-        </:col>
-
-        <:col :let={personnel} label="Children count">{personnel.children_count}</:col>
 
         <:col :let={personnel} label="Matricule" field="matricule" filter sort>
           {personnel.matricule}
         </:col>
 
-        <:col :let={personnel} label="Grade" field="grade" filter>{personnel.grade}</:col>
-
-        <:col :let={personnel} label="Professional diploma" field="professional_diploma" filter>
-          {personnel.professional_diploma}
+        <:col :let={personnel} label="Grade" field="grade">
+          <p>{EduCount.Census.Enums.Grade.description(personnel.grade)}</p>
+          <p>
+            {personnel.professional_diploma} {gettext("in")} {EduCount.Census.Enums.ProfessionalDiplomaOption.description(
+              personnel.professional_diploma_option
+            )}
+          </p>
         </:col>
 
-        <:col :let={personnel} label="Professional diploma option" field="professional_diploma_option" filter>
-          {personnel.professional_diploma_option}
+        <%!-- <:col :let={personnel} label="Degree subject">{personnel.degree_subject}</:col> --%>
+
+        <%!-- <:col :let={personnel} label="Other diplomas">{personnel.other_diplomas}</:col> --%>
+
+        <:col :let={personnel} label="Fonction" field="fonction">
+          <EduCountWeb.PersonnelLive.Show.fonction_component fonction={personnel.fonction} />
         </:col>
 
-        <:col :let={personnel} label="Degree subject">{personnel.degree_subject}</:col>
+        <:col :let={personnel} label={gettext("Dates")}>
+          <p>PSFP: {personnel.first_effective_service_date}</p>
+          <p>PSPA: {personnel.current_post_effective_service_date}</p>
+        </:col>
+        ]
+        <:filter
+          label={gettext("Grade")}
+          field="grade"
+          type="select"
+          options={
+            EduCount.Census.Enums.Grade.values()
+            |> Enum.map(fn value ->
+              {EduCount.Census.Enums.Grade.description(value), value}
+            end)
+          }
+        />
+        <:filter
+          label={gettext("Fonction")}
+          field="fonction"
+          type="select"
+          options={
+            EduCount.Census.Enums.Fonction.values()
+            |> Enum.map(fn value ->
+              {EduCount.Census.Enums.Fonction.description(value), value}
+            end)
+          }
+        />
+        <:filter
+          label={gettext("Language")}
+          field="language"
+          type="select"
+          options={
+            EduCount.Census.Enums.Language.values()
+            |> Enum.map(fn value ->
+              {EduCount.Census.Enums.Language.description(value), value}
+            end)
+          }
+        />
+        <:filter label={gettext("Professional diploma")} field="professional_diploma" />
 
-        <:col :let={personnel} label="Other diplomas">{personnel.other_diplomas}</:col>
+        <:filter
+          label={gettext("Professional diploma option")}
+          field="professional_diploma_option"
+          type="select"
+          options={
+            EduCount.Census.Enums.ProfessionalDiplomaOption.values()
+            |> Enum.map(fn value ->
+              {EduCount.Census.Enums.ProfessionalDiplomaOption.description(value), value}
+            end)
+          }
+        />
 
-        <:col :let={personnel} label="Fonction" field="fonction" filter>{personnel.fonction}</:col>
-
-        <:col
-          :let={personnel}
-          label="First effective service date"
+        <:filter
+          label={gettext("First post effective service date")}
           field="first_effective_service_date"
-          filter
-        >
-          {personnel.first_effective_service_date}
-        </:col>
+          type="date_range"
+        />
 
-        <:col
-          :let={personnel}
-          label="Current post effective service date"
+        <:filter
+          label={gettext("Current post effective service date")}
           field="current_post_effective_service_date"
-          filter
-        >
-          {personnel.current_post_effective_service_date}
+          type="date_range"
+        />
+
+        <:filter label="Dob" field="date_of_birth" type="date_range" />
+
+        <:col :let={personnel} label="Contacts">
+          <p>{personnel.telephone}</p>
+          <p>{personnel.email}</p>
         </:col>
-
-        <:col :let={personnel} label="Telephone">{personnel.telephone}</:col>
-
-        <:col :let={personnel} label="Email">{personnel.email}</:col>
-
-        <:action :let={personnel}>
-          <div class="sr-only">
-            <.link navigate={~p"/personnels/#{personnel}"}>Show</.link>
-          </div>
-
-          <.link navigate={~p"/personnels/#{personnel}/edit"}>Edit</.link>
-        </:action>
-
-        <:action :let={{id, personnel}}>
-          <.link
-            phx-click={JS.push("delete", value: %{id: personnel.id}) |> hide("##{id}")}
-            data-confirm="Are you sure?"
-          >
-            Delete
-          </.link>
-        </:action>
       </Cinder.Table.table>
     </Layouts.app>
     """

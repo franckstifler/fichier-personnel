@@ -17,6 +17,11 @@ defmodule EduCount.Census do
       define :search_sub_divition_by_name, action: :search_by_name, args: [:search]
       define :list_sub_divisions_alphabetically, action: :list_alphabetically
     end
-    resource EduCount.Census.Personnel
+
+    resource EduCount.Census.Personnel do
+      define :get_personnel_by_matricule_and_date_of_birth,
+        action: :read,
+        get_by: [:matricule, :date_of_birth]
+    end
   end
 end

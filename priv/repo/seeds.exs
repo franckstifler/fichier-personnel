@@ -9,30 +9,104 @@
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
-regions = [
-  [name: "Extreme Nord"],
-  [name: "Nord"],
-  [name: "Sud"],
-  [name: "Est"],
-  [name: "Ouest"],
-  [name: "Centre"],
-  [name: "Adamaoua"],
-  [name: "Littoral"],
-  [name: "Nord-Ouest"],
-  [name: "Sud-Ouest"]
-]
-
-Ash.bulk_create(regions, EduCount.Census.Region, :create,
-  upsert?: true,
-  upsert_identity: :unique_name,
-  upsert_fields: []
-)
 
 divisions = %{
+  "Adamaoua" => %{
+    "Djérem" => ["Ngaoundal", "Tibati"],
+    "Faro-et-Déo" => ["Galim-Tignère", "Kontcha", "Mayo-Baléo", "Tignère"],
+    "Mayo-Banyo" => ["Bankim", "Banyo", "Mayo-Darlé"],
+    "Mbéré" => ["Dir", "Djohong", "Meiganga", "Ngaoui"],
+    "Vina" => [
+      "Belel",
+      "Martap",
+      "Mbé",
+      "Nganha",
+      "Ngaoundéré I",
+      "Ngaoundéré II",
+      "Ngaoundéré III",
+      "Nyambaka"
+    ]
+  },
+  "Extrême-Nord" => %{
+    "Diamaré" => [
+      "Bogo",
+      "Dargala",
+      "Gazawa",
+      "Maroua I",
+      "Maroua II",
+      "Maroua III",
+      "Méri",
+      "Ndoukoula",
+      "Petté"
+    ],
+    "Logone-et-Chari" => [
+      "Blangoua",
+      "Darak",
+      "Fotokol",
+      "Goulfey",
+      "Hile-Alifa",
+      "Kousséri",
+      "Logone-Birni",
+      "Makary",
+      "Waza",
+      "Zina"
+    ],
+    "Mayo-Danay" => [
+      "Datcheka",
+      "Gobo",
+      "Guéré",
+      "Kaï-Kaï",
+      "Kalfou",
+      "Kar-Hay",
+      "Maga",
+      "Tchati-Bali",
+      "Vele",
+      "Wina",
+      "Yagoua"
+    ],
+    "Mayo-Kani" => [
+      "Guidiguis",
+      "Kaélé",
+      "Mindif",
+      "Moulvoudaye",
+      "Moutourwa",
+      "Porhi",
+      "Taibong"
+    ],
+    "Mayo-Sava" => ["Kolofata", "Mora", "Tokombéré"],
+    "Mayo-Tsanaga" => [
+      "Bourrha",
+      "Hina",
+      "Koza",
+      "Mayo-Moskota",
+      "Mogode",
+      "Mokolo",
+      "Soulédé-Roua"
+    ]
+  },
+  "Nord" => %{
+    "Bénoué" => [
+      "Baschéo (Bachéo)",
+      "Bibemi",
+      "Dembo",
+      "Demsa",
+      "Garoua I",
+      "Garoua II",
+      "Garoua III",
+      "Lagdo",
+      "Mayo-Hourna",
+      "Pitoa",
+      "Tcheboa",
+      "Touroua"
+    ],
+    "Faro" => ["Beka", "Poli"],
+    "Mayo-Louti" => ["Figuil", "Guider", "Mayo-Oulo"],
+    "Mayo-Rey" => ["Madingring", "Rey-Bouba", "Tcholliré", "Touboro"]
+  },
   "Centre" => %{
     "Haute-Sanaga" => [
       "Bibey",
-      "Lembe Yezoum",
+      "Lembe-Yezoum",
       "Mbandjock",
       "Minta",
       "Nanga-Eboko",
@@ -44,80 +118,58 @@ divisions = %{
       "Ebebda",
       "Elig-Mfomo",
       "Evodoula",
-      "Monatelé",
+      "Lobo",
+      "Monatélé",
       "Obala",
       "Okola",
       "Sa'a"
     ],
-    "Méfou et Afamba" => [
-      "Afanloum",
-      "Awaé",
-      "Edzendouan",
-      "Esse",
-      "Nkolafamba",
-      "Olanguina",
-      "Soa"
-    ],
-    "Mbam Inoubou" => [
+    "Mbam-et-Inoubou" => [
       "Bafia",
       "Bokito",
       "Deuk",
       "Kiiki",
-      "Kun-Yambetta",
+      "Kon-Yambetta",
       "Makénéné",
-      "Ndikinemeki",
+      "Ndikiniméki",
       "Nitoukou",
       "Ombessa"
     ],
-    "Mbam et Kim" => [
-      "Mbangassina",
-      "Ngambè-Tikar",
-      "Ngoro",
-      "Ntui",
-      "Yoko"
+    "Mbam-et-Kim" => ["Mbangassina", "Ngambè-Tikar", "Ngoro", "Ntui", "Yoko"],
+    "Méfou-et-Afamba" => [
+      "Afanloum",
+      "Assamba",
+      "Awaé",
+      "Edzendouan",
+      "Esse",
+      "Mfou",
+      "Nkolafamba",
+      "Soa"
     ],
+    "Méfou-et-Akono" => ["Akono", "Bikok", "Mbankomo", "Ngoumou"],
     "Mfoundi" => [
-      # Nlongkak
-      "Yaoundé 1",
-      # Tsinga
-      "Yaoundé 2",
-      # Efoulan
-      "Yaoundé 3",
-      # Kondengui
-      "Yaoundé 4",
-      # Nkolmesseng
-      "Yaoundé 5",
-      # Biyem-Assi
-      "Yaoundé 6",
-      # Nkolbisson
-      "Yaoundé 7"
+      "Yaoundé I",
+      "Yaoundé II",
+      "Yaoundé III",
+      "Yaoundé IV",
+      "Yaoundé V",
+      "Yaoundé VI",
+      "Yaoundé VII"
     ],
-    "Méfou et Akono" => [
-      "Akono",
-      "Bikok",
-      "Mbankomo",
-      "Ngoumou"
-    ],
-    "Nyong et Kelle" => [
+    "Nyong-et-Kéllé" => [
       "Biyouha",
       "Bondjock",
       "Bot-Makak",
       "Dibang",
-      "Eséka",
+      "Éséka",
       "Makak",
       "Matomb",
       "Messondo",
-      "Ngog Mapubi",
+      "Ngog-Mapubi",
       "Nguibassal"
     ],
-    "Nyong et Mfoumou" => [
-      "Akonolinga",
-      "Ayos",
-      "Endom",
-      "Mengang",
-      "Nyakokombo  (Kobdombo)"
-    ],
-    "Nyong et So'o" => [
+    "Nyong-et-Mfoumou" => ["Akonolinga", "Ayos", "Endom", "Mengang", "Nyakokombo"],
+    "Nyong-et-So'o" => [
       "Akoeman",
       "Dzeng",
       "Mbalmayo",
@@ -125,12 +177,164 @@ divisions = %{
       "Ngomedzap",
       "Nkolmetet"
     ]
+  },
+  "Est" => %{
+    "Boumba-et-Ngoko" => ["Gari-Gombo", "Moloundou", "Salapoumbé", "Yokadouma"],
+    "Haut-Nyong" => [
+      "Abong-Mbang",
+      "Bebend",
+      "Dimako",
+      "Dja",
+      "Doumaintang",
+      "Doumé",
+      "Lomié",
+      "Mboanz",
+      "Mboma",
+      "Messamena",
+      "Messok",
+      "Ngoyla",
+      "Nguelemendouka",
+      "Somalomo"
+    ],
+    "Kadey" => ["Batouri", "Bombé", "Kette", "Mbang", "Mbotoro", "Ndelele", "Ndem-Nam"],
+    "Lom-et-Djérem" => [
+      "Bélabo",
+      "Bertoua I",
+      "Bertoua II",
+      "Bétaré-Oya",
+      "Diang",
+      "Garoua-Boulaï",
+      "Mandjou",
+      "Ngoura"
+    ]
+  },
+  "Sud" => %{
+    "Dja-et-Lobo" => [
+      "Bengbis",
+      "Djoum",
+      "Meyomessala",
+      "Meyomessi",
+      "Mintom",
+      "Oveng",
+      "Sangmélima",
+      "Zoétélé"
+    ],
+    "Mvila" => [
+      "Biwong-Bane",
+      "Biwong-Bulu",
+      "Ebolowa I",
+      "Ebolowa II",
+      "Efoulan",
+      "Mengong",
+      "Mvangan",
+      "Ngoulemakong"
+    ],
+    "Océan" => [
+      "Akom II",
+      "Bipindi",
+      "Campo",
+      "Kribi I",
+      "Kribi II",
+      "Lokoundje",
+      "Lolodorf",
+      "Mvengue",
+      "Niété"
+    ],
+    "Vallée-du-Ntem" => ["Ambam", "Kyé-Ossi", "Ma'an", "Olamze"]
+  },
+  "Littoral" => %{
+    "Moungo" => [
+      "Abo Fiko (Bonaléa)",
+      "Baré-Bakem",
+      "Dibombari",
+      "Loum",
+      "Manjo",
+      "Mbanga",
+      "Melong",
+      "Mombo",
+      "Njombe-Penja",
+      "Nkongsamba I",
+      "Nkongsamba II",
+      "Nkongsamba III",
+      "Nlonako"
+    ],
+    "Nkam" => ["Nkondjock", "Nord-Makombé", "Yabassi", "Yingui"],
+    "Sanaga-Maritime" => [
+      "Dibamba",
+      "Dizangué",
+      "Édéa I",
+      "Édéa II",
+      "Massock-Songloulou",
+      "Mouanko",
+      "Ndom",
+      "Ngambe",
+      "Ngwei",
+      "Nyanon",
+      "Pouma"
+    ],
+    "Wouri" => ["Douala I", "Douala II", "Douala III", "Douala IV", "Douala V", "Douala VI"]
+  },
+  "Nord-Ouest" => %{
+    "Boyo" => ["Belo", "Bum", "Fundong", "Njinikom"],
+    "Bui" => ["Jakiri", "Kumbo", "Mbven", "Nkum", "Noni", "Oku"],
+    "Donga-Mantung" => ["Ako", "Misaje", "Ndu", "Nkambé", "Nwa"],
+    "Menchum" => ["Fungom", "Furu-Awa", "Menchum Valley", "Wum"],
+    "Mezam" => ["Bafut", "Bali", "Bamenda I", "Bamenda II", "Bamenda III", "Santa", "Tubah"],
+    "Momo" => ["Batibo", "Mbengwi", "Ngie", "Njikwa", "Widikum-Menka"],
+    "Ngo-Ketunjia" => ["Babessi", "Balikumbat", "Ndop"]
+  },
+  "Sud-Ouest" => %{
+    "Fako" => ["Buea", "Limbe I", "Limbe II", "Limbe III", "Muyuka", "Tiko", "West Coast"],
+    "Koupé-Manengouba" => ["Bangem", "Nguti", "Tombel"],
+    "Lebialem" => ["Alou", "Fontem", "Wabane"],
+    "Manyu" => ["Akwaya", "Eyumodjock", "Mamfé Central", "Upper Banyang"],
+    "Meme" => ["Konye", "Kumba I", "Kumba II", "Kumba III", "Mbonge"],
+    "Ndian" => [
+      "Bamusso",
+      "Dikome-Balue",
+      "Ekondo-Titi",
+      "Idabato",
+      "Isanguele",
+      "Kombo-Abedimo",
+      "Kombo-Itindi",
+      "Mundemba",
+      "Toko"
+    ]
+  },
+  "Ouest" => %{
+    "Bamboutos" => ["Babadjou", "Batcham", "Galim", "Mbouda"],
+    "Haut-Nkam" => ["Bafang", "Bakou", "Bana", "Bandja", "Banka", "Banwa", "Kékem"],
+    "Hauts-Plateaux" => ["Baham", "Bamendjou", "Bangou", "Batié"],
+    "Koung-Khi" => ["Bandjoun", "Bayangam", "Demdeng"],
+    "Menoua" => ["Dschang", "Fokoué", "Fongo-Tongo", "Nkong-Ni", "Penka-Michel", "Santchou"],
+    "Mifi" => ["Bafoussam I", "Bafoussam II", "Bafoussam III"],
+    "Ndé" => ["Bangangté", "Bassamba", "Bazou", "Tonga"],
+    "Noun" => [
+      "Bangourain",
+      "Foumban",
+      "Foumbot",
+      "Kouoptamo",
+      "Koutaba",
+      "Magba",
+      "Malentouen",
+      "Massangam",
+      "Njimom"
+    ]
   }
 }
 
-Enum.each(regions, fn [name: name] ->
-  region_divisions = Map.get(divisions, name, %{})
-  region = EduCount.Census.get_region_by_name!(name)
+regions = Map.keys(divisions) |> Enum.map(&[name: &1])
+
+%Ash.BulkResult{records: records, status: :success} =
+  Ash.bulk_create(regions, EduCount.Census.Region, :create,
+    upsert?: true,
+    upsert_identity: :unique_name,
+    return_records?: true,
+    upsert_fields: []
+  )
+
+Enum.each(records, fn region ->
+  region_divisions = Map.get(divisions, region.name, %{})
   divions_names = Map.keys(region_divisions)
 
   %Ash.BulkResult{records: records, status: :success} =

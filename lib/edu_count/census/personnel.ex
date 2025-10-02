@@ -95,6 +95,26 @@ defmodule EduCount.Census.Personnel do
     end
   end
 
+  calculations do
+    calculate :full_name, :string, expr(last_name <> " " <> first_name)
+
+    calculate :full_region_of_origin,
+              :string,
+              expr(
+                sub_division_of_origin.division.region.name <>
+                  " | " <>
+                  sub_division_of_origin.division.name <> " | " <> sub_division_of_origin.name
+              )
+
+    calculate :full_region_appointed,
+              :string,
+              expr(
+                sub_division_appointed.division.region.name <>
+                  " | " <>
+                  sub_division_appointed.division.name <> " | " <> sub_division_appointed.name
+              )
+  end
+
   identities do
     identity :unique_matricule, [:matricule]
     identity :unique_name_dob, [:last_name, :first_name, :date_of_birth]

@@ -7,7 +7,7 @@ defmodule EduCountWeb.PersonnelLive.Form do
     <Layouts.form flash={@flash}>
       <.header>
         {@page_title}
-        <:subtitle>Use this form to manage personnel records in your database.</:subtitle>
+        <%!-- <:subtitle></:subtitle> --%>
       </.header>
 
       <.form for={@form} id="personnel-form" phx-change="validate" phx-submit="save">
@@ -205,9 +205,10 @@ defmodule EduCountWeb.PersonnelLive.Form do
             <.input field={@form[:email]} type="text" label={gettext("Email")} />
           </fieldset>
         </div>
-
-        <.button phx-disable-with="Saving..." variant="primary">{gettext("Save")}</.button>
-        <.button navigate={return_path(@return_to, @personnel)}>{gettext("Cancel")}</.button>
+        <div class="mt-2">
+          <.button phx-disable-with="Saving..." variant="primary">{gettext("Save")}</.button>
+          <.button navigate={return_path(@return_to, @personnel)}>{gettext("Cancel")}</.button>
+        </div>
       </.form>
     </Layouts.form>
     """
@@ -282,6 +283,7 @@ defmodule EduCountWeb.PersonnelLive.Form do
     assign(socket, form: to_form(form))
   end
 
-  defp return_path("index", _personnel), do: ~p"/personnels"
-  defp return_path("show", personnel), do: ~p"/personnels/#{personnel.id}"
+  defp return_path(_, _personnel), do: ~p"/"
+  # defp return_path("index", _personnel), do: ~p"/personnels"
+  # defp return_path("show", personnel), do: ~p"/personnels/#{personnel.id}"
 end

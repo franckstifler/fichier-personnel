@@ -412,8 +412,8 @@ defmodule EduCountWeb.CoreComponents do
     ~H"""
     <ul class="list">
       <li :for={item <- @item} class="list-row">
-        <div>
-          <div class="font-bold">{item.title}</div>
+        <div class="flex gap-x-2">
+          <div class="font-bold">{item.title}: </div>
           <div>{render_slot(item)}</div>
         </div>
       </li>

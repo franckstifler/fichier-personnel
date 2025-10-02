@@ -1,4 +1,4 @@
-defmodule EduCountWeb.PersonnelLive.Show do
+defmodule EduCountWeb.PersonnelLive.View do
   use EduCountWeb, :live_view
 
   @impl true
@@ -6,22 +6,20 @@ defmodule EduCountWeb.PersonnelLive.Show do
     ~H"""
     <Layouts.app flash={@flash}>
       <.header>
-        <%!-- <.button navigate={~p"/personnels"}>
-          <.icon name="hero-arrow-left" />
-        </.button> --%>
-
         {@personnel.full_name}
-        <:subtitle>{@personnel.matricule}</:subtitle>
 
-        <%!-- <:actions>
-          <.button variant="primary" navigate={~p"/personnels/#{@personnel}/edit?return_to=show"}>
-            <.icon name="hero-pencil-square" /> Edit Personnel
+        <:actions>
+          <.button
+            variant="primary"
+            href="mailto:francktchowa@gmail.com?subject=Fichier%20du%20Personnel%20Support"
+          >
+            <.icon name="hero-pencil-square" /> {gettext("Request Edit")}
           </.button>
-        </:actions> --%>
+        </:actions>
       </.header>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-        <div class="card bg-base-200 shadow-md">
+        <div class="card bg-base-200 shadow-md ">
           <div class="card-body">
             <div class="card-title">{gettext("Personal information")}</div>
             <.list>
@@ -55,7 +53,7 @@ defmodule EduCountWeb.PersonnelLive.Show do
             </.list>
           </div>
         </div>
-        <div class="card bg-base-200 shadow-md">
+        <div class="card bg-base-200 shadow-md ">
           <div class="card-body">
             <div class="card-title">{gettext("Professional information")}</div>
             <.list>
