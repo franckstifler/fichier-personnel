@@ -46,6 +46,8 @@ config :spark,
     ]
   ]
 
+config :cinder, default_theme: "daisy_ui"
+
 config :edu_count,
   ecto_repos: [EduCount.Repo],
   generators: [timestamp_type: :utc_datetime],

@@ -13,6 +13,10 @@ defmodule EduCount.Census do
       define :list_region_divisions, action: :list_region_divisions, args: [:region_id]
     end
 
-    resource EduCount.Census.SubDivision
+    resource EduCount.Census.SubDivision do
+      define :search_sub_divition_by_name, action: :search_by_name, args: [:search]
+      define :list_sub_divisions_alphabetically, action: :list_alphabetically
+    end
+    resource EduCount.Census.Personnel
   end
 end

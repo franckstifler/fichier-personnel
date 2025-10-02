@@ -140,6 +140,7 @@ defmodule EduCountWeb.CoreComponents do
   attr :id, :any, default: nil
   attr :name, :any
   attr :label, :string, default: nil
+  attr :info_label, :string, default: nil
   attr :value, :any
 
   attr :type, :string,
@@ -216,6 +217,7 @@ defmodule EduCountWeb.CoreComponents do
           {Phoenix.HTML.Form.options_for_select(@options, @value)}
         </select>
       </label>
+      <p :if={@info_label} class="label">{@info_label}</p>
       <.error :for={msg <- @errors}>{msg}</.error>
     </fieldset>
     """
@@ -236,6 +238,7 @@ defmodule EduCountWeb.CoreComponents do
           {@rest}
         >{Phoenix.HTML.Form.normalize_value("textarea", @value)}</textarea>
       </label>
+      <p :if={@info_label} class="label">{@info_label}</p>
       <.error :for={msg <- @errors}>{msg}</.error>
     </fieldset>
     """
@@ -259,6 +262,35 @@ defmodule EduCountWeb.CoreComponents do
           {@rest}
         />
       </label>
+      <p :if={@info_label} class="label">{@info_label}</p>
+      <.error :for={msg <- @errors}>{msg}</.error>
+    </fieldset>
+    """
+  end
+
+  def live_select(%{field: field} = assigns) do
+    # This to fix live_select error displaying when input is not touched.
+    text_input_field = %{field | field: String.to_atom("#{field.field}" <> "_text_input")}
+
+    errors = if Phoenix.Component.used_input?(text_input_field), do: field.errors, else: []
+
+    assigns =
+      assigns
+      |> assign(:errors, Enum.map(errors, &translate_error(&1)))
+      |> assign(:class, Map.get(assigns, :class))
+      |> assign(:label, Map.get(assigns, :label))
+      |> assign(:live_select_opts, assigns_to_attributes(assigns, [:errors, :label]))
+
+    ~H"""
+    <fieldset class="fieldset mb-2">
+      <span :if={@label} class="label -mb-0.5">{@label}</span>
+      <LiveSelect.live_select
+        field={@field}
+        style={:daisyui}
+        debounce={300}
+        container_extra_class="w-full"
+        {@live_select_opts}
+      />
       <.error :for={msg <- @errors}>{msg}</.error>
     </fieldset>
     """

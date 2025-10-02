@@ -16,6 +16,13 @@ defmodule EduCount.Census.SubDivision do
       prepare build(sort: [name: :asc])
     end
 
+    read :search_by_name do
+      argument :search, :ci_string, public?: true
+      pagination keyset?: true, default_limit: 10
+
+      filter expr(contains(name, ^arg(:search)))
+    end
+
     create :create do
       primary? true
       accept [:name, :division_id]

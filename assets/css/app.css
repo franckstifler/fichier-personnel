@@ -2,6 +2,8 @@
    https://tailwindcss.com/docs/configuration */
 
 @import "tailwindcss" source(none);
+@source "../../deps/live_select/lib/live_select/component.*ex";
+@source "../../deps/cinder/lib";
 @source "../css";
 @source "../js";
 @source "../../lib/edu_count_web";

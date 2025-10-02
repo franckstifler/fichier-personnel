@@ -18,6 +18,13 @@ defmodule EduCountWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
+
+    live "/personnels", PersonnelLive.Index, :index
+    live "/personnels/new", PersonnelLive.Form, :new
+    # live "/personnels/:id/edit", PersonnelLive.Form, :edit
+
+    live "/personnels/:id", PersonnelLive.Show, :show
+    # live "/personnels/:id/show/edit", PersonnelLive.Show, :edit
   end
 
   scope "/config", EduCountWeb do
