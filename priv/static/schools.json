@@ -1,0 +1,815 @@
+{
+    "Adamaoua": {
+        "Djerem": {
+            "Ngaoundal": [],
+            "Tibati": []
+        },
+        "Faro-et-Deo": {
+            "Galim-Tignere": [],
+            "Kontcha": [],
+            "Mayo-Baleo": [],
+            "Tignere": []
+        },
+        "Mayo-Banyo": {
+            "Bankim": [],
+            "Banyo": [],
+            "Mayo-Darle": []
+        },
+        "Mbere": {
+            "Dir": [],
+            "Djohong": [],
+            "Meiganga": [],
+            "Ngaoui": []
+        },
+        "Vina": {
+            "Belel": [],
+            "Martap": [],
+            "Mbe": [],
+            "Nganha": [],
+            "Ngaoundere I": [],
+            "Ngaoundere II": [],
+            "Ngaoundere III": [],
+            "Nyambaka": []
+        }
+    },
+    "Centre": {
+        "Haute-Sanaga": {
+            "Bibey": [],
+            "Lembe-Yezoum": [],
+            "Mbandjock": [
+                "LYCEE BILINGUE DE MBANDJOCK",
+                "CES DE NDJORE",
+                "LYCEE DE MBANDJOCK",
+                "LYCEE TECHNIQUE BILINGUE DE MBANDJOCK",
+                "COLLEGE PRIVE LAIC BILINGUE SAINT PAUL"
+            ],
+            "Minta": [
+                "LYCEE BILINGUE DE MINTA",
+                "CES DE MEKON II",
+                "CES DE NGO'O",
+                "CES DE VELA",
+                "LYCEE DE WALL",
+                "CES DE NIOB NOUVEAU",
+                "CETIC DE MBET",
+                "CETIC DE MINTA",
+                "CETIC DE WALL"
+            ],
+            "Nanga-Eboko": [],
+            "Nkoteng": [
+                "LYCEE BILINGUE DE NKOTENG",
+                "CES DE CAMP NANGAH",
+                "LYCEE DE NKOTENG",
+                "LYCEE TECHNIQUE DE NKOTENG"
+            ],
+            "Nsem": [
+                "LYCEE DE NSEM",
+                "CETIC DE NSEM"
+            ]
+        },
+        "Lekie": {
+            "Batchenga": [
+                "CES D'ELON",
+                "LYCEE DE BATCHENGA",
+                "LYCEE TECHNIQUE DE BATCHENGA",
+                "DILLIGENT BILINGUAL EDUCATION"
+            ],
+            "Ebebda": [
+                "LYCEE BILINGUE D'EBEBDA",
+                "CES DE KOAN",
+                "CES DE NKANG EFOK",
+                "CES DE LEKA",
+                "CES DE NKOM",
+                "CETIC DE NGOKSA"
+            ],
+            "Elig-Mfomo": [],
+            "Evodoula": [
+                "LYCEE BILINGUE D'EVODOULA",
+                "CES DE KOMO-EVODOULA",
+                "CES DE NLOUDOU",
+                "LYCEE DE NKOLKOUGDA",
+                "LYCEE DE PONGSOLO",
+                "LYCEE DE NKOLASSA",
+                "LYCEE TECHNIQUE D'EVODOULA",
+                "CETIC DE NKOLASSA"
+            ],
+            "Lobo": [
+                "CES D'EKEKAM III",
+                "CES DE NKOLMEYANG LOBO",
+                "LYCEE DE LOBO",
+                "LYCEE MODERNE DE NLONG",
+                "CETIC  D'AKOK"
+            ],
+            "Monatele": [
+                "LYCEE BILINGUE DE  MONATELE",
+                "CES D'ELIG-AMBASSA",
+                "CES DE KOUGOUDA-CENTRE",
+                "LYCEE DE MONATELE",
+                "LYCEE DE  MONATELE II",
+                "LYCEE DE MONABO",
+                "CETIC D'EMANA",
+                "CETIC D'ETAKA",
+                "CETIC DE NKOLKOSSE",
+                "LYCEE TECHNIQUE DE MONATELE",
+                "ENIEG DE MONATELE",
+                "CEGTI DE TALA"
+            ],
+            "Obala": [
+                "LYCEE BILINGUE D'OBALA",
+                "CES D'ESSONG",
+                "CES D'ELIG-NGOMO",
+                "CES D'ELIG-NKOUMA",
+                "CES DE MBELE",
+                "CES DE NTUISSONG-OBALA",
+                "CES DE NKOLMELEN",
+                "LYCEE D'EFOK",
+                "LYCEE D'EZEZANG-MENDOUM",
+                "LYCEE DE KOUDANDENG",
+                "LYCEE DE MINKAMA",
+                "LYCEE DE NKOMOTOU",
+                "LYCEE D'OBALA",
+                "LYCEE DE YEMESSOA I",
+                "CETIC D'ENDINDING",
+                "CETIC DE YEMKOUT",
+                "LYCEE TCHNIQUE DE  NKOMETOU-CENTRE",
+                "LYCEE TECHNIQUE D'OBALA",
+                "COLLEGE BILINGUE LA PROVIDENCE",
+                "COMPLEXE BILINGUE SEPHORA",
+                "COLLEGE BILINGUE PERE LUC",
+                "INSTITUT LA  PERSEVERANCE",
+                "COLLEGE LA CHARITE",
+                "COLLEGE JOSEPH STINTZI",
+                "PETIT SEMINAIRE D'EFOK",
+                "COLLEGE JEAN XXIII",
+                "COURS DU SOIR LA CHARITE",
+                "INSTITUT AGRICOLE D'OBALA",
+                "COLLEGE STE CATHERINE",
+                "COLLEGE NTONDOBE",
+                "ENIEG PRIVEE D'OBALA"
+            ],
+            "Okola": [
+                "CES DE BITSINGDA",
+                "CES D'EKABITA-TOM",
+                "CES DE MINSOA",
+                "CES DE NGOYA II",
+                "CES DE NKOLAKIE",
+                "CES DE NKOLEKOTSING",
+                "CES D'OKOUKOUDA",
+                "CES DE VOA II",
+                "LYCEE DE NKOLPOBLO",
+                "LYCEE DE NTUISSONG-OKOLA",
+                "LYCEE BILINGUE D'OKOLA",
+                "LYCEE DE ZAMENGOE",
+                "CETIC D'ELIG-ONANA",
+                "CETIC DE KONABENG",
+                "CETIC DE NKODASSA",
+                "CETIC DE YAGASSI-NKOLYEN",
+                "LYCEE TECHNIQUE DE NKOLZIBI",
+                "LYCEE TECHNIQUE D'OKOLA",
+                "COURS DU SOIR NANCY ET FRERES",
+                "COLLEGE ONANA EBODE",
+                "INSTITUT LES CLARISSES",
+                "COLLEGE SAINTE THERESE DE MVA'A",
+                "INSTITUT SERAPH ET DANIEL",
+                "COLLEGE NEL",
+                "THE CITADEL INTERNATIONAL BILINGUAL COMPLEX"
+            ],
+            "Sa'a": [
+                "LYCEE BILINGUE DE SA'A",
+                "CES DE NKOLBOGO I",
+                "CES NKOLZOA I",
+                "CES DE NLONG-ZOK",
+                "CES D'ONDONDO",
+                "CES DE POLO",
+                "LYCEE D'EKEKOM",
+                "LYCEE DE MENGAMA",
+                "LYCEE DE NKOLEBASSIMBI",
+                "LYCEE DE NKOLVE",
+                "LYCEE DE SA'A",
+                "CETIC DE MENDOUGA-MOKALA",
+                "CETIC DE WOMKOA",
+                "LYCEE TECHNIQUE DE LEBAMZIP",
+                "LYCEE TECHNIQUE DE SA'A",
+                "CEGTI DE NKOLVE",
+                "COLLEGE BULLIER",
+                "ENIEG PRIVEE \"LES PEDAGOGUES REUNIS\""
+            ]
+        },
+        "Mbam-et-Inoubou": {
+            "Bafia": [
+                "LYCEE BILINGUE DE BAFIA",
+                "LYCEE CLASSIQUE ET MODERNE DE BAFIA",
+                "CES DE RIMIS",
+                "CES DE DONENKENG",
+                "CES DE LABLE",
+                "CES DE MERENG",
+                "LYCEE TECHNIQUE DE BAFIA",
+                "LYCEE TECHNIQUE DE BAFIA LAMBATTA",
+                "ENIEG DE BAFIA",
+                "COMPLEXE SCOLAIRE BILINGUE CYWIBRA",
+                "COLLEGE SABAYA",
+                "PETIT SEMINAIRE SAINT ANDRE",
+                "COLLEGE PRIVE POLYVALENT DU MBAM",
+                "COLLEGE PRIVE LAIC MBONO"
+            ],
+            "Bokito": [
+                "LYCEE BILINGUE DE BOKITO",
+                "LYCEE DE BALAMBA",
+                "LYCEE DE YANGBEN",
+                "CES D'EDIOLOMO",
+                "CES DE GUEFIGUE",
+                "CES DE BOKAGA II",
+                "CES DE TCHEKOS",
+                "CES DE BEGNI",
+                "LYCEE TECHNIQUE DE BOKITO",
+                "CETIC D'ASSALA I & II",
+                "CETIC DE BALAMBA",
+                "CETIC DE BAKOA",
+                "CETIC BONGO",
+                "CETIC DE YAMBASSA"
+            ],
+            "Deuk": [
+                "LYCEE DE DEUK",
+                "CES DE BOKO",
+                "CES DE BANGONG",
+                "CETIC DE DEUK"
+            ],
+            "Kiiki": [
+                "CES BILINGUE DE KIIKI",
+                "LYCEE DE MOUKO",
+                "CES DE BEP GOUIFE",
+                "CES DE BITANG",
+                "CES DE GBARAM-YAKAN",
+                "LYCEE TECHNIQUE DE KIIKI",
+                "CETIC DE BITANG",
+                "CETIC DE ROUM"
+            ],
+            "Kon-Yambetta": [],
+            "Ndikinimeki": [
+                "LYCEE BILINGUE DE MAKENENE",
+                "CES BILINGUE DE MAKENENE EST",
+                "LYCEE TECHNIQUE DE MAKENENE",
+                "LYCEE DE MAKENENE",
+                "LYCEE DE NYOKON",
+                "COLLEGE PRIVE CHAMPIONS DE MAKENENE",
+                "LYCEE TECHNIQUE DE MAKENENE",
+                "College Prive Champions de Makenene",
+                "GOOD SHEPHERED Bilingual College de Ndikinimeki",
+                "LYCEE BILINGUE DE Ndikinimeki",
+                "LYCEE DE NEBOLEN",
+                "LYCEE BILINGUE DE NDIKOKO",
+                "CES DE NDOKOWANEN",
+                "LYCEE TECHNIQUE DE Ndikinimeki",
+                "CETIC D'ETOUNDOU III"
+            ],
+            "Nitoukou": [
+                "LYCEE DE NITOUKOU",
+                "CES DE NDOGSONDEN",
+                "LYCEE TECHNIQUE DE NITOUKOU"
+            ],
+            "Ombessa": [
+                "CES BILINGUE D'OMBESSA",
+                "LYCEE DE BALIAMA",
+                "LYCEE DE BOURAKA",
+                "LYCEE DE GUETSAMBANA OMBESSA",
+                "LYCEE D'OMBESSA",
+                "CETIF NOTRE DAME DE SOMO",
+                "LYCEE TECHNIQUE D'OMBESSA",
+                "CETIC DE BOURAKA",
+                "CETIC BILINGUE DE BOYAGNANO",
+                "COLLEGE CHAMPAGNAT D'OMBESSA",
+                "ENIEG PRIVEE BILINGUE MORIJA JEHOVAH JIRE"
+            ]
+        },
+        "Mbam-et-Kim": {
+            "Mbangassina": [
+                "CES YEBEKOLO",
+                "LYCEE MBANGASSINA",
+                "LYCEE TEATE-EBINA",
+                "LYCEE BILINGUE DE BIAKOA",
+                "CES BILINGUE DE BILOMO",
+                "LYCEE BILINGUE DE VOUNDOU",
+                "CETIC TALBA I",
+                "LYCEE TECHNIQUE MBANGASSINA",
+                "BSS  VOUNDOU",
+                "COLLEGE BILINGUE NILI VOUNDOU",
+                "WISDOM BILINGUAL COLLEGE VOUNDOU",
+                "COL MAT INTELLECT DE BIAKOA",
+                "COL AGRICOLE JEAN ZOA DE TALBA I"
+            ],
+            "Ngambe-Tikar": [],
+            "Ngoro": [
+                "CES BILINGUE DE  NYABIDI",
+                "CES BILINGUE NYASSAKOUNOU",
+                "CES D'EGONA 2",
+                "LYCEE DE NGORO",
+                "LYCEE YASSEM",
+                "LYCEE TECHNIQUE DE NGORO",
+                "CETIC DE YASSEM",
+                "COMPLEXE SCOLAIRE BILINGUE WOURI",
+                "CES DE YANGBE"
+            ],
+            "Ntui": [
+                "LYCEE BILINGUE DE  NTUI",
+                "LYCEE BILINGUE DE  NGUILA",
+                "CES BILINGUE SALAKOUNOU",
+                "LYCEE DE NTUI",
+                "CES KOUSSE",
+                "CES BILANGA-KOMBE",
+                "LYCEE TECHNIQUE DE  NTUI",
+                "CETIC NACHTIGAL",
+                "CETIC NDIMI",
+                "ENIEG DE NTUI",
+                "COLLEGE BILINGUE BAPTISTE DE BIYELE CBC",
+                "COMPLEXE SCOLAIRE BILINGUE LE MIEL",
+                "INSTITUT POLYVALENT BILINGUE LES PYRAMIDES",
+                "COLLEGE BILINGUE LE BON BERGER",
+                "ST ANDRE"
+            ],
+            "Yoko": [
+                "CES DE DOUME -YOKO",
+                "CES DE LINTE",
+                "CES DE NDJOLE",
+                "CES DE NGOUETOU",
+                "CES DE ISSANDJA",
+                "LYCEE BILINGUE DE YOKO",
+                "CETIC DE MANGAI",
+                "CETIC MBA'AM",
+                "CETIC DE NDJOLE",
+                "LT YOKO",
+                "Excellent leadership Institute For Transformational Education(Elite Academy)"
+            ]
+        },
+        "Mefou-et-Afamba": {
+            "Afanloum": [
+                "CES D'AFALOUM"
+            ],
+            "Assamba": [
+                "CES DE NKOLESSONG",
+                "LYCEE D'OLANGUINA",
+                "CETIC STT D'OLANGUINA"
+            ],
+            "Awae": [
+                "CES BILINGUE D'AWAE",
+                "LYCEE MIXTE D'AWAE",
+                "CES DE MIMBANG",
+                "CES DE NGAT-AWAE",
+                "CES DE NGUINDA",
+                "LYCEE D'ELAT",
+                "LYCEE TECHNIQUE D'AWAE",
+                "CETIC STT D'ELAT",
+                "CETIC STT D'OMAN"
+            ],
+            "Edzendouan": [
+                "CES D'EDZENDOUAN",
+                "LYCEE DE NDZANA",
+                "CETIC STT D'EDZENDOUAN"
+            ],
+            "Esse": [
+                "LYCEE BILINGUE D'ESSE",
+                "CES D'AFANETOUANA",
+                "CES D'EBODOUMOU",
+                "CES D'EBOLZOK (NON FONCTIONNEL)",
+                "CES D'EWOT",
+                "CES DE MVENG-ESSABOUTOU",
+                "LYCEE TECHNIQUE D'ESSE"
+            ],
+            "Mfou": [
+                "LYCEE BILINGUE DE MFOU",
+                "CES D'AWAE-MFOU",
+                "CES D'EKALI 1",
+                "CES DE MENDONG 2",
+                "CES DE MFOU VILLE",
+                "CES DE NKASSOMO",
+                "CES DE NKOLOVENG",
+                "LYCEE D'ABANG-NKONGOA",
+                "LYCEE D'ESSAZOK-NSIMALEN",
+                "LYCEE DE MBELOA-NSIMALEN",
+                "LYCEE DE NKOLNDA-NSIMALEN",
+                "LYCEE CLASSIQUE DE MFOU",
+                "CETIC STT D'EKALI",
+                "CETIC STT DE NGANG",
+                "CETIC STT DE NKONGOA",
+                "LYCEE TECHNIQUE DE MFOU",
+                "ENIEG DE MFOU"
+            ],
+            "Nkolafamba": [
+                "LYCEE BILINGUE DE MINDICK-MEHANDAN",
+                "LYCEE BILINGUE DE NKOABANG-NKOLAFAMBA"
+            ],
+            "Soa": []
+        },
+        "Mefou-et-Akono": {
+            "Akono": [],
+            "Bikok": [],
+            "Mbankomo": [],
+            "Ngoumou": []
+        },
+        "Mfoundi": {
+            "Yaounde I": [],
+            "Yaounde II": [],
+            "Yaounde III": [],
+            "Yaounde IV": [],
+            "Yaounde V": [],
+            "Yaounde VI": [],
+            "Yaounde VII": []
+        },
+        "Nyong-et-Kelle": {
+            "Biyouha": [],
+            "Bondjock": [],
+            "Bot-Makak": [],
+            "Dibang": [],
+            "Eseka": [],
+            "Makak": [],
+            "Matomb": [],
+            "Messondo": [],
+            "Ngog-Mapubi": [],
+            "Nguibassal": []
+        },
+        "Nyong-et-Mfoumou": {
+            "Akonolinga": [],
+            "Ayos": [],
+            "Endom": [],
+            "Mengang": [],
+            "Nyakokombo": []
+        },
+        "Nyong-et-So'o": {
+            "Akoeman": [],
+            "Dzeng": [],
+            "Mbalmayo": [],
+            "Mengueme": [],
+            "Ngomedzap": [],
+            "Nkolmetet": []
+        }
+    },
+    "Est": {
+        "Boumba-et-Ngoko": {
+            "Gari-Gombo": [],
+            "Moloundou": [],
+            "Salapoumbe": [],
+            "Yokadouma": []
+        },
+        "Haut-Nyong": {
+            "Abong-Mbang": [],
+            "Bebend": [],
+            "Dimako": [],
+            "Dja": [],
+            "Doumaintang": [],
+            "Doume": [],
+            "Lomie": [],
+            "Mboanz": [],
+            "Mboma": [],
+            "Messamena": [],
+            "Messok": [],
+            "Ngoyla": [],
+            "Nguelemendouka": [],
+            "Somalomo": []
+        },
+        "Kadey": {
+            "Batouri": [],
+            "Bombe": [],
+            "Kette": [],
+            "Mbang": [],
+            "Mbotoro": [],
+            "Ndelele": [],
+            "Ndem-Nam": []
+        },
+        "Lom-et-Djerem": {
+            "Belabo": [],
+            "Bertoua I": [],
+            "Bertoua II": [],
+            "Betare-Oya": [],
+            "Diang": [],
+            "Garoua-Boulaï": [],
+            "Mandjou": [],
+            "Ngoura": []
+        }
+    },
+    "Extrême-Nord": {
+        "Diamare": {
+            "Bogo": [],
+            "Dargala": [],
+            "Gazawa": [],
+            "Maroua I": [],
+            "Maroua II": [],
+            "Maroua III": [],
+            "Meri": [],
+            "Ndoukoula": [],
+            "Pette": []
+        },
+        "Logone-et-Chari": {
+            "Blangoua": [],
+            "Darak": [],
+            "Fotokol": [],
+            "Goulfey": [],
+            "Hile-Alifa": [],
+            "Kousseri": [],
+            "Logone-Birni": [],
+            "Makary": [],
+            "Waza": [],
+            "Zina": []
+        },
+        "Mayo-Danay": {
+            "Datcheka": [],
+            "Gobo": [],
+            "Guere": [],
+            "Kalfou": [],
+            "Kar-Hay": [],
+            "Kaï-Kaï": [],
+            "Maga": [],
+            "Tchati-Bali": [],
+            "Vele": [],
+            "Wina": [],
+            "Yagoua": []
+        },
+        "Mayo-Kani": {
+            "Guidiguis": [],
+            "Kaele": [],
+            "Mindif": [],
+            "Moulvoudaye": [],
+            "Moutourwa": [],
+            "Porhi": [],
+            "Taibong": []
+        },
+        "Mayo-Sava": {
+            "Kolofata": [],
+            "Mora": [],
+            "Tokombere": []
+        },
+        "Mayo-Tsanaga": {
+            "Bourrha": [],
+            "Hina": [],
+            "Koza": [],
+            "Mayo-Moskota": [],
+            "Mogode": [],
+            "Mokolo": [],
+            "Soulede-Roua": []
+        }
+    },
+    "Littoral": {
+        "Moungo": {
+            "Abo Fiko (Bonalea)": [],
+            "Bare-Bakem": [],
+            "Dibombari": [],
+            "Loum": [],
+            "Manjo": [],
+            "Mbanga": [],
+            "Melong": [],
+            "Mombo": [],
+            "Njombe-Penja": [],
+            "Nkongsamba I": [],
+            "Nkongsamba II": [],
+            "Nkongsamba III": [],
+            "Nlonako": []
+        },
+        "Nkam": {
+            "Nkondjock": [],
+            "Nord-Makombe": [],
+            "Yabassi": [],
+            "Yingui": []
+        },
+        "Sanaga-Maritime": {
+            "Dibamba": [],
+            "Dizangue": [],
+            "Edea I": [],
+            "Edea II": [],
+            "Massock-Songloulou": [],
+            "Mouanko": [],
+            "Ndom": [],
+            "Ngambe": [],
+            "Ngwei": [],
+            "Nyanon": [],
+            "Pouma": []
+        },
+        "Wouri": {
+            "Douala I": [],
+            "Douala II": [],
+            "Douala III": [],
+            "Douala IV": [],
+            "Douala V": [],
+            "Douala VI": []
+        }
+    },
+    "Nord": {
+        "Benoue": {
+            "Bascheo (Bacheo)": [],
+            "Bibemi": [],
+            "Dembo": [],
+            "Demsa": [],
+            "Garoua I": [],
+            "Garoua II": [],
+            "Garoua III": [],
+            "Lagdo": [],
+            "Mayo-Hourna": [],
+            "Pitoa": [],
+            "Tcheboa": [],
+            "Touroua": []
+        },
+        "Faro": {
+            "Beka": [],
+            "Poli": []
+        },
+        "Mayo-Louti": {
+            "Figuil": [],
+            "Guider": [],
+            "Mayo-Oulo": []
+        },
+        "Mayo-Rey": {
+            "Madingring": [],
+            "Rey-Bouba": [],
+            "Tchollire": [],
+            "Touboro": []
+        }
+    },
+    "Nord-Ouest": {
+        "Boyo": {
+            "Belo": [],
+            "Bum": [],
+            "Fundong": [],
+            "Njinikom": []
+        },
+        "Bui": {
+            "Jakiri": [],
+            "Kumbo": [],
+            "Mbven": [],
+            "Nkum": [],
+            "Noni": [],
+            "Oku": []
+        },
+        "Donga-Mantung": {
+            "Ako": [],
+            "Misaje": [],
+            "Ndu": [],
+            "Nkambe": [],
+            "Nwa": []
+        },
+        "Menchum": {
+            "Fungom": [],
+            "Furu-Awa": [],
+            "Menchum Valley": [],
+            "Wum": []
+        },
+        "Mezam": {
+            "Bafut": [],
+            "Bali": [],
+            "Bamenda I": [],
+            "Bamenda II": [],
+            "Bamenda III": [],
+            "Santa": [],
+            "Tubah": []
+        },
+        "Momo": {
+            "Batibo": [],
+            "Mbengwi": [],
+            "Ngie": [],
+            "Njikwa": [],
+            "Widikum-Menka": []
+        },
+        "Ngo-Ketunjia": {
+            "Babessi": [],
+            "Balikumbat": [],
+            "Ndop": []
+        }
+    },
+    "Ouest": {
+        "Bamboutos": {
+            "Babadjou": [],
+            "Batcham": [],
+            "Galim": [],
+            "Mbouda": []
+        },
+        "Haut-Nkam": {
+            "Bafang": [],
+            "Bakou": [],
+            "Bana": [],
+            "Bandja": [],
+            "Banka": [],
+            "Banwa": [],
+            "Kekem": []
+        },
+        "Hauts-Plateaux": {
+            "Baham": [],
+            "Bamendjou": [],
+            "Bangou": [],
+            "Batie": []
+        },
+        "Koung-Khi": {
+            "Bandjoun": [],
+            "Bayangam": [],
+            "Demdeng": []
+        },
+        "Menoua": {
+            "Dschang": [],
+            "Fokoue": [],
+            "Fongo-Tongo": [],
+            "Nkong-Ni": [],
+            "Penka-Michel": [],
+            "Santchou": []
+        },
+        "Mifi": {
+            "Bafoussam I": [],
+            "Bafoussam II": [],
+            "Bafoussam III": []
+        },
+        "Nde": {
+            "Bangangte": [],
+            "Bassamba": [],
+            "Bazou": [],
+            "Tonga": []
+        },
+        "Noun": {
+            "Bangourain": [],
+            "Foumban": [],
+            "Foumbot": [],
+            "Kouoptamo": [],
+            "Koutaba": [],
+            "Magba": [],
+            "Malentouen": [],
+            "Massangam": [],
+            "Njimom": []
+        }
+    },
+    "Sud": {
+        "Dja-et-Lobo": {
+            "Bengbis": [],
+            "Djoum": [],
+            "Meyomessala": [],
+            "Meyomessi": [],
+            "Mintom": [],
+            "Oveng": [],
+            "Sangmelima": [],
+            "Zoetele": []
+        },
+        "Mvila": {
+            "Biwong-Bane": [],
+            "Biwong-Bulu": [],
+            "Ebolowa I": [],
+            "Ebolowa II": [],
+            "Efoulan": [],
+            "Mengong": [],
+            "Mvangan": [],
+            "Ngoulemakong": []
+        },
+        "Ocean": {
+            "Akom II": [],
+            "Bipindi": [],
+            "Campo": [],
+            "Kribi I": [],
+            "Kribi II": [],
+            "Lokoundje": [],
+            "Lolodorf": [],
+            "Mvengue": [],
+            "Niete": []
+        },
+        "Vallee-du-Ntem": {
+            "Ambam": [],
+            "Kye-Ossi": [],
+            "Ma'an": [],
+            "Olamze": []
+        }
+    },
+    "Sud-Ouest": {
+        "Fako": {
+            "Buea": [],
+            "Limbe I": [],
+            "Limbe II": [],
+            "Limbe III": [],
+            "Muyuka": [],
+            "Tiko": [],
+            "West Coast": []
+        },
+        "Koupe-Manengouba": {
+            "Bangem": [],
+            "Nguti": [],
+            "Tombel": []
+        },
+        "Lebialem": {
+            "Alou": [],
+            "Fontem": [],
+            "Wabane": []
+        },
+        "Manyu": {
+            "Akwaya": [],
+            "Eyumodjock": [],
+            "Mamfe Central": [],
+            "Upper Banyang": []
+        },
+        "Meme": {
+            "Konye": [],
+            "Kumba I": [],
+            "Kumba II": [],
+            "Kumba III": [],
+            "Mbonge": []
+        },
+        "Ndian": {
+            "Bamusso": [],
+            "Dikome-Balue": [],
+            "Ekondo-Titi": [],
+            "Idabato": [],
+            "Isanguele": [],
+            "Kombo-Abedimo": [],
+            "Kombo-Itindi": [],
+            "Mundemba": [],
+            "Toko": []
+        }
+    }
+}
